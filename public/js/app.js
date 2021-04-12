@@ -10,7 +10,7 @@ weatherform.addEventListener('submit',(event)=>{
     const location = search.value
     msgone.textContent = 'loading...'
     msgtwo.textContent = ""
-    fetch('http://localhost:3002/weather?address='+location).then((response)=>{
+    fetch('/weather?address='+location).then((response)=>{
      response.json().then((data)=>{
          if(data.error){
             msgone.textContent = data.error
@@ -25,3 +25,4 @@ weatherform.addEventListener('submit',(event)=>{
 
    })
 })
+ssh
